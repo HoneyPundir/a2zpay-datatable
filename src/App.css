@@ -8,7 +8,7 @@ body {
 }
 
 body {
-  font-family:'DM Sans', sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
 }
 .navbar {
   height: 65px;
@@ -51,13 +51,13 @@ body {
   bottom: -10px;
 }
 .navbar > ul > li > a.active::before {
-    content: "";
-    width: 110%;
-    height: 2px;
-    position: absolute;
-    background: #00b8ff;
-    bottom: -10px;
-  }
+  content: "";
+  width: 110%;
+  height: 2px;
+  position: absolute;
+  background: #00b8ff;
+  bottom: -10px;
+}
 .navbar ul > li > a.active {
   color: #00b8ff;
 }
@@ -101,7 +101,6 @@ body {
   justify-content: space-between;
 }
 
-
 .detail .right button {
   color: #fff;
   border: 0;
@@ -112,56 +111,204 @@ body {
   margin: 0 5px;
 }
 .detail .right .view {
-    background: #1d3a70;
+  background: #1d3a70;
 }
 .detail .right .export {
-    background: green;
+  background: green;
 }
 .detail .right .csv {
-    background: #f77e17;
+  background: #f77e17;
 }
 .detail .right .filter {
-    background: #1d3a70;
-
+  background: #1d3a70;
 }
 
-.radio-container{
-    padding: 30px 60px;
+.radio-container {
+  padding: 30px 60px;
 }
-.radio-container label{
-    margin-right: 20px;
+.radio-container label {
+  margin-right: 20px;
 }
-.radio-container label input{
-    margin-right: 5px;
+.radio-container label input {
+  margin-right: 5px;
 }
 /* ------------NAVBAR END------------ */
 .datatable {
-    margin: 0 60px;
-    overflow-x: scroll;
+  margin: 0 60px;
+  overflow-x: scroll;
 }
-.datatable table{
-    -webkit-border-horizontal-spacing: 0;
-    -webkit-border-vertical-spacing: 0;
-    width: 100%;
+.datatable table {
+  -webkit-border-horizontal-spacing: 0;
+  -webkit-border-vertical-spacing: 0;
+  width: 100%;
 }
-.datatable table thead{
-    background: #f5f5f5;
+.datatable table thead {
+  background: #f5f5f5;
 }
-.datatable table thead tr th{
-    text-align: center;
-    padding: 10px 20px;
-    text-wrap: nowrap;
+.datatable table thead tr th {
+  text-align: center;
+  padding: 10px 20px;
+  text-wrap: nowrap;
 }
-.datatable table tbody tr:hover td{
-    background-color: #fcfcfc;
+.datatable table tbody tr:hover td {
+  background-color: #fcfcfc;
 }
-.datatable table tbody tr td{
-    border-bottom: 1px solid #f0f0f0;
-    padding: 5px 15px;
-    font-size: 14px;
-    color: #505050 !important;
-    text-align: center;
-    letter-spacing: 0.5px;
-    font-size: 12px;
-    text-wrap: nowrap;
+.datatable table tbody tr td {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #505050 !important;
+  text-align: center;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  text-wrap: nowrap;
+}
+
+.checkboxes.active {
+  display: block;
+}
+.checkboxes {
+  display: none;
+  border-radius: 10px;
+  background: #fff;
+  position: absolute;
+  width: 1000px;
+  height: fit-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+.checkboxes .heading {
+  background: #ececec;
+  padding: 15px 30px;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  display: flex;
+  justify-content: space-between;
+}
+.checkboxes .heading .cut-icon {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  cursor: pointer;
+  user-select: none;
+}
+.checkboxes .heading span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkboxes .boxes {
+  display: grid;
+  padding: 30px;
+  grid-template-columns: auto auto auto auto;
+  list-style: none;
+}
+
+.checkboxes .boxes li {
+  padding: 10px 0;
+  font-size: 15px;
+  align-items: center;
+  display: flex;
+}
+.checkboxes .boxes li input {
+  margin-right: 15px;
+}
+.boxes *,
+.boxes ::after,
+.boxes ::before {
+  box-sizing: border-box;
+}
+.boxes [type="checkbox"].substituted {
+  margin: 0;
+  width: 0;
+  height: 0;
+  display: inline;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.boxes [type="checkbox"].substituted + label:before {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  height: 1.15em;
+  width: 1.15em;
+  margin-right: 0.6em;
+  color: rgba(0, 0, 0, 0.275);
+  border: solid 0.06em;
+  box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em inset,
+    0 0 0 0.07em transparent inset;
+  border-radius: 0.2em;
+  background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xml:space="preserve" fill="white" viewBox="0 0 9 9"><rect x="0" y="4.3" transform="matrix(-0.707 -0.7072 0.7072 -0.707 0.5891 10.4702)" width="4.3" height="1.6" /><rect x="2.2" y="2.9" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 12.1877 2.9833)" width="6.1" height="1.7" /></svg>')
+      no-repeat center,
+    white;
+  background-size: 0;
+  will-change: color, border, background, background-size, box-shadow;
+  transform: translate3d(0, 0, 0);
+  transition: color 0.1s, border 0.1s, background 0.15s, box-shadow 0.1s;
+}
+.boxes [type="checkbox"].substituted:enabled:active + label:before,
+.boxes [type="checkbox"].substituted:enabled + label:active:before {
+  box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em transparent inset,
+    0 0 0 0.07em rgba(0, 0, 0, 0.1) inset;
+  background-color: #f0f0f0;
+}
+.boxes [type="checkbox"].substituted:checked + label:before {
+  background-color: #3b99fc;
+  background-size: 0.75em;
+  color: rgba(0, 0, 0, 0.075);
+}
+.boxes [type="checkbox"].substituted:checked:enabled:active + label:before,
+.boxes [type="checkbox"].substituted:checked:enabled + label:active:before {
+  background-color: #0a7ffb;
+  color: rgba(0, 0, 0, 0.275);
+}
+.boxes [type="checkbox"].substituted:focus + label:before {
+  box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em transparent inset,
+    0 0 0 0.07em rgba(0, 0, 0, 0.1) inset, 0 0 0 3.3px rgba(65, 159, 255, 0.55),
+    0 0 0 5px rgba(65, 159, 255, 0.3);
+}
+.boxes [type="checkbox"].substituted:focus:active + label:before,
+.boxes [type="checkbox"].substituted:focus + label:active:before {
+  box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em transparent inset,
+    0 0 0 0.07em rgba(0, 0, 0, 0.1) inset, 0 0 0 3.3px rgba(65, 159, 255, 0.55),
+    0 0 0 5px rgba(65, 159, 255, 0.3);
+}
+.boxes [type="checkbox"].substituted:disabled + label:before {
+  opacity: 0.5;
+}
+
+.boxes [type="checkbox"].substituted.dark + label:before {
+  color: rgba(255, 255, 255, 0.275);
+  background-color: #222;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xml:space="preserve" fill="rgba(34, 34, 34, 0.999)" viewBox="0 0 9 9"><rect x="0" y="4.3" transform="matrix(-0.707 -0.7072 0.7072 -0.707 0.5891 10.4702)" width="4.3" height="1.6" /><rect x="2.2" y="2.9" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 12.1877 2.9833)" width="6.1" height="1.7" /></svg>');
+}
+.boxes [type="checkbox"].substituted.dark:enabled:active + label:before,
+.boxes [type="checkbox"].substituted.dark:enabled + label:active:before {
+  background-color: #444;
+  box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em transparent inset,
+    0 0 0 0.07em rgba(255, 255, 255, 0.1) inset;
+}
+.boxes [type="checkbox"].substituted.dark:checked + label:before {
+  background-color: #a97035;
+  color: rgba(255, 255, 255, 0.075);
+}
+.boxes [type="checkbox"].substituted.dark:checked:enabled:active + label:before,
+.boxes
+  [type="checkbox"].substituted.dark:checked:enabled
+  + label:active:before {
+  background-color: #c68035;
+  color: rgba(0, 0, 0, 0.275);
+}
+.boxes [type="checkbox"].substituted + label {
+  -webkit-user-select: none;
+  user-select: none;
 }
